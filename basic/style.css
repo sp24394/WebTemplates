@@ -1,70 +1,45 @@
-#page-container {
-    width: 800px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
-    margin: auto;
-    display: flex;
+* {
+    --base-padding: clamp(30px, calc((100vw - 800px)/2), 800px);
 }
 
 body {
+    color: white;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #222;
 }
 
-nav {
-    color: white;
-    width: 200px;
+header {
+    padding: 10px var(--base-padding);
+    height: 60px;
     background-color: #1d1d1d;
-    padding: 5px;
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
     justify-content: space-between;
 }
 
-nav div {
+header div .logo {
+    height: 100%;
+}
+
+header div {
+    height: 60%;
+}
+
+header nav {
     display: flex;
-    flex-direction: column;
+    gap: 1.5rem;
 }
 
-main {
-    margin-left: 210px;
-    width: calc(100vw - 210px);
-}
-
-nav div a .logo {
-    width: 95%;
-}
-
-nav div a:has(.logo) {
-    padding: 20px 20px;
-}
-
-nav div a:not(:has(.logo)) {
+header nav a {
     color: white;
-    opacity: 80%;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding: 0.6rem 0.35rem;
-    margin: 0 15px;
-    transition: 0.2s padding ease;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    transition: 0.3s all ease;
+    border-radius: 8px;
+    border: 1px solid transparent;
 }
 
-nav div a:not(:has(.logo)):hover {
-    padding: 0.6rem 0.45rem;
-    opacity: 100%;
-}
-
-nav hr {
-    width: calc(100% - 30px);
-    opacity: 30%;
-}
-
-footer {
-    opacity: 40%;
-    margin: 0.5rem auto;
+header nav a:hover {
+    border: 1px solid white;
 }
