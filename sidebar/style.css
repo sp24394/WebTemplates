@@ -47,16 +47,17 @@ nav div a:not(:has(.logo)) {
     color: white;
     opacity: 80%;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
     padding: 0.6rem 0.35rem;
     margin: 0 15px;
     transition: 0.15s all ease;
     font-size: 0.9rem;
+    border-radius: 6px;
 }
 
 nav div a:not(:has(.logo)):hover {
     padding: 0.6rem 0.45rem;
     opacity: 100%;
+    background-color: rgba(0,0,0,0.1);
 }
 
 nav hr {
